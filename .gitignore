@@ -1,0 +1,33 @@
+# Logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+web_modules/
+
+# Output directory (Vite build)
+dist/
+dist-ssr/
+
+# Python envs and cache
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store
+
+# Environments / Secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+backend/.env
+frontend/.env

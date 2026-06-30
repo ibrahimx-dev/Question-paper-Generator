@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+
+pdfplumber
+python-docx
+reportlab
+python-dotenv
+pydantic[email]
+python-multipart
+groq
+
