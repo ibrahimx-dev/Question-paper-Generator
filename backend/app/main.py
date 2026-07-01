@@ -9,7 +9,12 @@ app = FastAPI(title="AI-Based Question Paper Generator")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://question-paper-generator-delta-gray.vercel.app",
+        "https://question-paper-generator-g2pgvyf2u.vercel.app",
+    ],
+    allow_origin_regex="https://.*\\.vercel\\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
