@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://question-paper-generator-g2pgvyf2u.vercel.app/sitemap.xml
