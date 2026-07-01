@@ -399,8 +399,8 @@ export default function Generator() {
                                                 </div>
                                             </div>
 
-                                            {/* Inputs Grid */}
-                                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                                            {/* Inputs Row 1: Name, Marks, Questions Count */}
+                                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                                 <div>
                                                     <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">
                                                         Section Name
@@ -425,13 +425,16 @@ export default function Generator() {
                                                     value={sec.questionCount}
                                                     onChange={(v) => updateSection(idx, 'questionCount', v)}
                                                 />
+                                            </div>
 
+                                            {/* Inputs Row 2: Questions to Answer, Question Type */}
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                                 <div>
                                                     <div className="flex justify-between items-center mb-1">
                                                         <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider">
                                                             Questions to Answer
                                                         </label>
-                                                        <label className="flex items-center gap-1 text-[11px] text-indigo-600 font-semibold cursor-pointer select-none">
+                                                        <label className="flex items-center gap-1 text-[11px] text-indigo-600 font-semibold cursor-pointer select-none whitespace-nowrap">
                                                             <input
                                                                 type="checkbox"
                                                                 checked={sec.answerAll}

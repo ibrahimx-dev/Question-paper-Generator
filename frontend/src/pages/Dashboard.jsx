@@ -1,27 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import {
-    X, Upload, FileType2, CheckCircle2, AlertCircle,
-    FileText, Activity, Wand2, UploadCloud, Loader2
+    X, Upload, CheckCircle2, AlertCircle,
+    FileText, Wand2, UploadCloud, Loader2
 } from "lucide-react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
-// ─── Stat Card ────────────────────────────────────────────────────────────────
-function StatCard({ icon: Icon, label, value, color, bg }) {
-    return (
-        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 flex items-center gap-4 hover:shadow-md transition-shadow">
-            <div className={`p-3 rounded-xl ${bg}`}>
-                <Icon className={`h-5 w-5 ${color}`} />
-            </div>
-            <div>
-                <p className="text-xs font-medium text-gray-500 uppercase tracking-wide">{label}</p>
-                <p className="text-2xl font-bold text-gray-900 mt-0.5">{value}</p>
-            </div>
-        </div>
-    );
-}
+
 
 // ─── Main Dashboard ───────────────────────────────────────────────────────────
 export default function Dashboard() {
@@ -175,11 +162,7 @@ export default function Dashboard() {
 
     return (
         <div className="space-y-8 max-w-5xl mx-auto">
-            {/* ── Stat row ── */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <StatCard icon={Activity} label="Questions in Bank" value={stats.questions} color="text-indigo-600" bg="bg-indigo-50" />
-                <StatCard icon={FileText} label="Papers Generated" value={stats.papers} color="text-emerald-600" bg="bg-emerald-50" />
-            </div>
+
 
             {/* ── Centered simplified upload section ── */}
             <div className="max-w-xl mx-auto">
